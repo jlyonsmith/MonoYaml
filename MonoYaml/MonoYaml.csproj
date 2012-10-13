@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0716F257-72DD-41EF-8E79-54BA388E3AB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MonoYaml</RootNamespace>
+    <AssemblyName>MonoYaml</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\MonoYaml.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>True</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeLib\Pair.cs" />
+    <Compile Include="CodeLib\StringHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FileFormat\ParserCustom.cs" />
+    <Compile Include="FileFormat\ParserInput.cs" />
+    <Compile Include="FileFormat\TextInput.cs" />
+    <Compile Include="FileFormat\TextParserCommon.cs" />
+    <Compile Include="FileFormat\YamlParser.cs" />
+    <Compile Include="FileFormat\Custom\BlockScalarModifier.cs" />
+    <Compile Include="FileFormat\Custom\ChompingMethod.cs" />
+    <Compile Include="FileFormat\Custom\MappingEntry.cs" />
+    <Compile Include="FileFormat\Custom\Scalar.cs" />
+    <Compile Include="FileFormat\Custom\YamlDocument.cs" />
+    <Compile Include="FileFormat\Syntax\BlockScalarModifier.cs" />
+    <Compile Include="FileFormat\Syntax\DataItem.cs" />
+    <Compile Include="FileFormat\Syntax\Directive.cs" />
+    <Compile Include="FileFormat\Syntax\GlobalTagPrefix.cs" />
+    <Compile Include="FileFormat\Syntax\LocalTagPrefix.cs" />
+    <Compile Include="FileFormat\Syntax\Mapping.cs" />
+    <Compile Include="FileFormat\Syntax\MappingEntry.cs" />
+    <Compile Include="FileFormat\Syntax\NamedTagHandle.cs" />
+    <Compile Include="FileFormat\Syntax\NodeProperty.cs" />
+    <Compile Include="FileFormat\Syntax\NonSpecificTag.cs" />
+    <Compile Include="FileFormat\Syntax\PrimaryTagHandle.cs" />
+    <Compile Include="FileFormat\Syntax\ReservedDirective.cs" />
+    <Compile Include="FileFormat\Syntax\Scalar.cs" />
+    <Compile Include="FileFormat\Syntax\SecondaryTagHandle.cs" />
+    <Compile Include="FileFormat\Syntax\Sequence.cs" />
+    <Compile Include="FileFormat\Syntax\ShorthandTag.cs" />
+    <Compile Include="FileFormat\Syntax\Tag.cs" />
+    <Compile Include="FileFormat\Syntax\TagDirective.cs" />
+    <Compile Include="FileFormat\Syntax\TagHandle.cs" />
+    <Compile Include="FileFormat\Syntax\TagPrefix.cs" />
+    <Compile Include="FileFormat\Syntax\VerbatimTag.cs" />
+    <Compile Include="FileFormat\Syntax\YamlDirective.cs" />
+    <Compile Include="FileFormat\Syntax\YamlDocument.cs" />
+    <Compile Include="FileFormat\Syntax\YamlStream.cs" />
+    <Compile Include="FileFormat\Syntax\YamlVersion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="FileFormat\" />
+    <Folder Include="FileFormat\Custom\" />
+    <Folder Include="FileFormat\Syntax\" />
+    <Folder Include="FileFormat\Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileFormat\Test\YAML.PEG.txt" />
+    <None Include="FileFormat\Test\YAML.txt" />
+    <None Include="FileFormat\Test\YAML_Sample.txt" />
+  </ItemGroup>
+</Project>
